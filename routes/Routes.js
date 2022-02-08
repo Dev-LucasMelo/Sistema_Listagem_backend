@@ -19,7 +19,7 @@ Router.get('/dados', (req, res) => { // ROTA COM OS DADOS RETORNADOS DA PROMISE 
 
 Router.post('/finalizado', (req, res) => {
 
-    database.query('insert into users (name,about,age,sex) values ($1,$2,$3,$4)', [req.body.name, req.body.about, req.body.age, req.body.sex])
+    database.query('insert into users (name,about,age,sex) values ($1,$2,$3,$4)', [req.body.name, req.body.about, req.body.age, req.body.sexo])
 
     res.sendFile(__dirname + '/html/index.html')
 
