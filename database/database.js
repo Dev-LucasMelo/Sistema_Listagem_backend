@@ -1,11 +1,7 @@
 const pg = require('pg')
 
-const database = new pg.Client ({
-    user: 'postgres',
-    password: 'Lm07112002',
-    database: 'teste',
-    port: 5432,
-    host:'localhost'
-})
+var uri_local = 'postgres://postgres:Lm07112002@localhost:5432/teste'
+
+const database = new pg.Client(process.env.DATABASE_URL)
 
 module.exports = database
